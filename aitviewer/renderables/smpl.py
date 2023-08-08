@@ -22,6 +22,7 @@ import numpy as np
 import torch
 from scipy.spatial.transform import Rotation
 from smplx.joint_names import JOINT_NAMES, SMPLH_JOINT_NAMES
+from aitviewer.models.smal_joint_names import SMAL_JOINT_NAMES, HSMAL_JOINT_NAMES
 
 from aitviewer.configuration import CONFIG as C
 from aitviewer.models.smpl import SMPLLayer
@@ -586,6 +587,12 @@ class SMPLSequence(Node):
         if self.smpl_layer.model_type == "smplh":
             if j < len(SMPLH_JOINT_NAMES):
                 name = SMPLH_JOINT_NAMES[j]
+        elif self.smpl_layer.model_type == 'smal':
+            if j < len(SMAL_JOINT_NAMES):
+                name = SMAL_JOINT_NAMES[j]
+        elif self.smpl_layer.model_type == 'hsmal':
+            if j < len(HSMAL_JOINT_NAMES):
+                name = HSMAL_JOINT_NAMES[j]
         else:
             if j < len(JOINT_NAMES):
                 name = JOINT_NAMES[j]

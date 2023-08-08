@@ -4,16 +4,23 @@
 # [![aitviewer](assets/aitviewer_logo.svg)](https://github.com/eth-ait/aitviewer)
 A set of tools to visualize and interact with sequences of 3D data with cross-platform support on Windows, Linux, and macOS. See the official page at [https://eth-ait.github.io/aitviewer](https://eth-ait.github.io/aitviewer/) for all the details.
 
+## Update
+Current aitviewer version is 1.9.0.
+
+Support [SMAL](https://smal.is.tue.mpg.de/) and [hSMAL](https://sites.google.com/view/cv4horses/cv4horses?authuser=0) model.
+
+Thank Peter Kulits for the provided interface.
+
 ## Installation
-Basic Installation:
+~~Basic Installation:~~
 ```commandline
 pip install aitviewer
 ```
-Note that this does not install the GPU-version of PyTorch automatically. If your environment already contains it, you should be good to go, otherwise install it manually.
+~~Note that this does not install the GPU-version of PyTorch automatically. If your environment already contains it, you should be good to go, otherwise install it manually.~~
 
 Or install locally (if you need to extend or modify code)
 ```commandline
-git clone git@github.com:eth-ait/aitviewer.git
+git clone git@github.com:Celiali/aitviewer_animal.git
 cd aitviewer
 pip install -e .
 ```
